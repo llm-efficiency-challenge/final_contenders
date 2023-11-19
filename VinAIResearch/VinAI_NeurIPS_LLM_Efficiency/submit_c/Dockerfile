@@ -23,4 +23,3 @@ RUN git clone https://huggingface.co/artidoro/model-vinaic
 RUN python merge_and_save.py --lora_path model-vinaic
 # Run the server
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
-

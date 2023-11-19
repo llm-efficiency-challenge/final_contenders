@@ -24,4 +24,3 @@ git clone https://huggingface.co/artidoro/model-vinaia
 RUN python merge_and_save.py --lora_path model-vinaia
 # Run the server
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
-
