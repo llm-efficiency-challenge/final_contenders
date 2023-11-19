@@ -1,0 +1,70 @@
+2023-10-20 03:38:45.724022: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Starting time is:  2023-10-20 16:08:46 IST+0530
+RANDOM STRING is:  8579cd42-8166-4ba6-a0f3-5c588b2cdc36
+REPO DECIDED is:  anmolagarwal999/nips_challenge_8579cd42-8166-4ba6-a0f3-5c588b2cdc36
+Token will not been saved to git credential helper. Pass `add_to_git_credential=True` if you want to set the git credential as well.
+Token is valid (permission: write).
+Your token has been saved to /home/anmol/.cache/huggingface/token
+Login successful
+Total gradient accumulation steps are:  4
+OUTPUT dir is:  ./models_saved/32_32_8579cd42-8166-4ba6-a0f3-5c588b2cdc36
+KWARGS sent to main() are:  {'model_name': 'meta-llama/Llama-2-7b-hf', 'use_peft': True, 'peft_method': 'lora', 'quantization': True, 'batch_size_training': 8, 'gradient_accumulation_steps': 4, 'dataset': 'custom_dataset', 'custom_dataset.file': './train.py:get_anmol_dataset', 'output_dir': './models_saved/32_32_8579cd42-8166-4ba6-a0f3-5c588b2cdc36'}
+Inside update config file
+Inside update config file
+Inside update config file
+Anmol: The final config after all the updations is:  <class 'llama_recipes.configs.training.train_config'>
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.46s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.05it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]
+/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/site-packages/peft/utils/other.py:133: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/site-packages/torch/cuda/memory.py:329: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+--> Model meta-llama/Llama-2-7b-hf
+
+--> meta-llama/Llama-2-7b-hf has 262.41024 Million params
+
+Inside update config file
+trainable params: 4,194,304 || all params: 6,742,609,920 || trainable%: 0.06220594176090199
+Inside update config file
+Dataset config is:  custom_dataset(dataset='custom_dataset', file='./train.py:get_anmol_dataset', train_split='train', test_split='validation')
+Starting time is:  2023-10-20 16:08:57 IST+0530
+RANDOM STRING is:  173da1a4-f2b7-4d34-bb0e-4c4276e2d247
+REPO DECIDED is:  anmolagarwal999/nips_challenge_173da1a4-f2b7-4d34-bb0e-4c4276e2d247
+Ending time is:  2023-10-20 16:08:57 IST+0530
+INSIDE INIT FUNCTION
+--> Training Set Length = 6847
+Starting time is:  2023-10-20 16:08:57 IST+0530
+RANDOM STRING is:  ae38b5cd-fcef-43e4-9c80-b010bcf20c45
+REPO DECIDED is:  anmolagarwal999/nips_challenge_ae38b5cd-fcef-43e4-9c80-b010bcf20c45
+Ending time is:  2023-10-20 16:08:57 IST+0530
+INSIDE INIT FUNCTION
+--> Validation Set Length = 500
+Training config is:  <class 'llama_recipes.configs.training.train_config'>
+Training Epoch: 1:   0%|[34m          [0m| 0/213 [00:00<?, ?it/s]/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:322: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+Traceback (most recent call last):
+  File "train.py", line 79, in <module>
+    main()
+  File "train.py", line 65, in main
+    finetuning(**kwargs)
+  File "/home/anmol/nips_challenge/efficiency_challenge_repo/code/00_starter_repo/neurips_llm_efficiency_challenge/sample-submissions/llama_recipes/llama_recipes_external_code/src/llama_recipes/finetuning.py", line 251, in main
+    results = train(
+  File "/home/anmol/nips_challenge/efficiency_challenge_repo/code/00_starter_repo/neurips_llm_efficiency_challenge/sample-submissions/llama_recipes/llama_recipes_external_code/src/llama_recipes/utils/train_utils.py", line 96, in train
+    loss.backward()
+  File "/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/site-packages/torch/autograd/__init__.py", line 251, in backward
+Traceback (most recent call last):
+  File "/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/multiprocessing/queues.py", line 245, in _feed
+    send_bytes(obj)
+  File "/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/anmol/anaconda3/envs/wizard_coder/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+Training Epoch: 1:   0%|[34m          [0m| 0/213 [00:14<?, ?it/s]

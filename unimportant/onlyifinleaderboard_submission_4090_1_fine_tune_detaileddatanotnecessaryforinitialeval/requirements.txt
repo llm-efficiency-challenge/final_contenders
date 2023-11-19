@@ -1,0 +1,10 @@
+pip install git+https://github.com/huggingface/transformers trl accelerate torch bitsandbytes scipy peft datasets ninja wheel
+
+MAX_JOBS=4 pip install flash-attn --no-build-isolation
+
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+
+git lfs install
+
+huggingface-cli login

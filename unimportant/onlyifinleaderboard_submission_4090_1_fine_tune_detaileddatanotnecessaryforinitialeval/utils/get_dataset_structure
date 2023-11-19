@@ -1,0 +1,11 @@
+from datasets import load_dataset
+
+# Load dataset
+dataset = load_dataset('GAIR/lima', split="train")
+
+# Print keys
+print(f"Keys: {list(dataset[0].keys())}\n")
+
+# Print a single example
+print(f"Example: {dataset[0]}")
+

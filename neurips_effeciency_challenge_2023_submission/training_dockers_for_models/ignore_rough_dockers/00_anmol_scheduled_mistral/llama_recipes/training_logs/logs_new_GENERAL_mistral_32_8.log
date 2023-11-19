@@ -1,0 +1,145 @@
+Starting time is:  2023-10-26 04:22:37 IST+0530
+RANDOM STRING is:  mistral_model_59c7f323-74ae-4538-808b-fe054f5ccd84
+REPO DECIDED is:  anmolagarwal999/nips_challenge_mistral_model_59c7f323-74ae-4538-808b-fe054f5ccd84
+Token will not been saved to git credential helper. Pass `add_to_git_credential=True` if you want to set the git credential as well.
+Token is valid (permission: write).
+Your token has been saved to /home/t-agarwalan/.cache/huggingface/token
+Login successful
+Total gradient accumulation steps are:  4
+OUTPUT dir is:  ./models_saved/32_8_mistral_model_59c7f323-74ae-4538-808b-fe054f5ccd84
+Custom dataset path is:  train.py
+Going to begin finetuning
+Python env is:  wizard_coder_inference
+Script path is:  /home/t-agarwalan/Desktop/nips_effeciency_challenge/EfficiencyChallenge/code/00_starter_repo/neurips_llm_efficiency_challenge/sample-submissions/llama_recipes/llama_recipes_external_code/src/llama_recipes/finetuning.py
+KWARGS sent to main() are:  {'model_name': 'mistralai/Mistral-7B-v0.1', 'use_peft': True, 'peft_method': 'lora', 'quantization': True, 'batch_size_training': 8, 'gradient_accumulation_steps': 4, 'dataset': 'custom_dataset', 'custom_dataset.file': 'train.py:get_anmol_dataset', 'output_dir': './models_saved/32_8_mistral_model_59c7f323-74ae-4538-808b-fe054f5ccd84'}
+Inside update config file
+Inside update config file
+Inside update config file
+Anmol: The final config after all the updations is:  <class 'llama_recipes.configs.training.train_config'>
+Train config seed is:  42
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.80s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.22s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.31s/it]
+/anaconda/envs/wizard_coder_inference/lib/python3.8/site-packages/peft/utils/other.py:122: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+/anaconda/envs/wizard_coder_inference/lib/python3.8/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+--> Model mistralai/Mistral-7B-v0.1
+
+--> mistralai/Mistral-7B-v0.1 has 262.41024 Million params
+
+Anmol: preparing model for int8 training
+Tokenizer has been loaded:  LlamaTokenizerFast(name_or_path='mistralai/Mistral-7B-v0.1', vocab_size=32000, model_max_length=1000000000000000019884624838656, is_fast=True, padding_side='left', truncation_side='right', special_tokens={'bos_token': '<s>', 'eos_token': '</s>', 'unk_token': '<unk>', 'pad_token': '<PAD>'}, clean_up_tokenization_spaces=False),  added_tokens_decoder={
+	0: AddedToken("<unk>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	1: AddedToken("<s>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	2: AddedToken("</s>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	32000: AddedToken("<PAD>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+Inside update config file
+PEFT config is:  LoraConfig(peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path=None, revision=None, task_type='CAUSAL_LM', inference_mode=False, r=8, target_modules=['q_proj', 'v_proj'], lora_alpha=32, lora_dropout=0.05, fan_in_fan_out=False, bias='none', modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None)
+trainable params: 3,407,872 || all params: 7,245,139,968 || trainable%: 0.04703666202518836
+Inside update config file
+Dataset config is:  custom_dataset(dataset='custom_dataset', file='train.py:get_anmol_dataset', train_split='train', test_split='validation')
+Starting time is:  2023-10-26 04:22:47 IST+0530
+RANDOM STRING is:  mistral_model_4db9ae32-869b-4ad8-a680-8c07d8d4f578
+REPO DECIDED is:  anmolagarwal999/nips_challenge_mistral_model_4db9ae32-869b-4ad8-a680-8c07d8d4f578
+Ending time is:  2023-10-26 04:22:47 IST+0530
+INSIDE INIT FUNCTION for partition:  train
+TRAIN PATH is:  /home/t-agarwalan/Desktop/nips_effeciency_challenge/EfficiencyChallenge/data/new_training_datasets/pegasus_combined_general_train_dataset.json
+Initial len is:  9846
+Final len is:  9536
+MAX WORDS in dataset is:  2706
+Anmol: Enable FSDP val is:  False
+--> Training Set Length = 7628
+Starting time is:  2023-10-26 04:22:53 IST+0530
+RANDOM STRING is:  mistral_model_ad490b64-b452-475b-9445-ea9770fdc5b6
+REPO DECIDED is:  anmolagarwal999/nips_challenge_mistral_model_ad490b64-b452-475b-9445-ea9770fdc5b6
+Ending time is:  2023-10-26 04:22:53 IST+0530
+INSIDE INIT FUNCTION for partition:  validation
+TRAIN PATH is:  /home/t-agarwalan/Desktop/nips_effeciency_challenge/EfficiencyChallenge/data/new_training_datasets/pegasus_combined_general_train_dataset.json
+Initial len is:  9846
+Final len is:  9536
+MAX WORDS in dataset is:  2706
+--> Validation Set Length = 1908
+Initializaing the optimizer and scheduler
+Training config is:  <class 'llama_recipes.configs.training.train_config'>
+Going to start the training process.
+Model is:  PeftModelForCausalLM(
+  (base_model): LoraModel(
+    (model): MistralForCausalLM(
+      (model): MistralModel(
+        (embed_tokens): Embedding(32000, 4096)
+        (layers): ModuleList(
+          (0-31): 32 x MistralDecoderLayer(
+            (self_attn): MistralAttention(
+              (q_proj): Linear8bitLt(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (k_proj): Linear8bitLt(in_features=4096, out_features=1024, bias=False)
+              (v_proj): Linear8bitLt(
+                in_features=4096, out_features=1024, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=1024, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (o_proj): Linear8bitLt(in_features=4096, out_features=4096, bias=False)
+              (rotary_emb): MistralRotaryEmbedding()
+            )
+            (mlp): MistralMLP(
+              (gate_proj): Linear8bitLt(in_features=4096, out_features=14336, bias=False)
+              (up_proj): Linear8bitLt(in_features=4096, out_features=14336, bias=False)
+              (down_proj): Linear8bitLt(in_features=14336, out_features=4096, bias=False)
+              (act_fn): SiLUActivation()
+            )
+            (input_layernorm): MistralRMSNorm()
+            (post_attention_layernorm): MistralRMSNorm()
+          )
+        )
+        (norm): MistralRMSNorm()
+      )
+      (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+    )
+  )
+)
+Training config received is:  <class 'llama_recipes.configs.training.train_config'>
+Use fp16 has been set to:  False
+Epoch starting time:  2023-10-26 04:22:57 IST+0530
+NumElems are:  5
+Ministeps save_arr:  239 [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99, 103, 107, 111, 115, 119, 123, 127, 131, 135, 139, 143, 147, 151, 155, 159, 163, 167, 171, 175, 179, 183, 187, 191, 195, 199, 203, 207, 211, 215, 219, 223, 227, 231, 235, 239, 243, 247, 251, 255, 259, 263, 267, 271, 275, 279, 283, 287, 291, 295, 299, 303, 307, 311, 315, 319, 323, 327, 331, 335, 339, 343, 347, 351, 355, 359, 363, 367, 371, 375, 379, 383, 387, 391, 395, 399, 403, 407, 411, 415, 419, 423, 427, 431, 435, 439, 443, 447, 451, 455, 459, 463, 467, 471, 475, 479, 483, 487, 491, 495, 499, 503, 507, 511, 515, 519, 523, 527, 531, 535, 539, 543, 547, 551, 555, 559, 563, 567, 571, 575, 579, 583, 587, 591, 595, 599, 603, 607, 611, 615, 619, 623, 627, 631, 635, 639, 643, 647, 651, 655, 659, 663, 667, 671, 675, 679, 683, 687, 691, 695, 699, 703, 707, 711, 715, 719, 723, 727, 731, 735, 739, 743, 747, 751, 755, 759, 763, 767, 771, 775, 779, 783, 787, 791, 795, 799, 803, 807, 811, 815, 819, 823, 827, 831, 835, 839, 843, 847, 851, 855, 859, 863, 867, 871, 875, 879, 883, 887, 891, 895, 899, 903, 907, 911, 915, 919, 923, 927, 931, 935, 939, 943, 947, 951, 952]
+Essential ministeps:  5 [3, 952, 715, 479, 243]
+Training Epoch: 0:   0%|[34m          [0m| 0/238 [00:00<?, ?it/s]Total ministeps are:  953
+grad accumulation steps:  4
+Total effective steps in Epoch:  238
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+/anaconda/envs/wizard_coder_inference/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:322: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+Training Epoch: 0/12, completed (loss: 1.6651808023452759):   0%|[34m          [0m| 0/238 [00:09<?, ?it/s]Training Epoch: 0/12, completed (loss: 0.6658652424812317):   0%|[34m          [0m| 0/238 [00:16<?, ?it/s]Training Epoch: 0/12, completed (loss: 1.7363886833190918):   0%|[34m          [0m| 0/238 [00:23<?, ?it/s]Training Epoch: 0/12, completed (loss: 1.7363886833190918):   0%|[34m          [0m| 1/238 [00:31<2:03:24, 31.24s/it]$$$$$$ EVALUATING $$$$$$
+Evaluating on epoch_id 0, step_id: 3
+
+evaluating Epoch:   0%|[32m          [0m| 0/59 [00:00<?, ?it/s][Ahuggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+evaluating Epoch:   2%|[32m▏         [0m| 1/59 [00:07<07:24,  7.67s/it][A
+evaluating Epoch:   3%|[32m▎         [0m| 2/59 [00:15<07:14,  7.62s/it][A

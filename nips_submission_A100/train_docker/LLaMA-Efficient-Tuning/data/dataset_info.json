@@ -1,0 +1,781 @@
+{
+  "alpaca_en": {
+    "file_name": "alpaca_data_en_52k.json",
+    "file_sha1": "607f94a7f581341e59685aef32f531095232cf23"
+  },
+  "alpaca_zh": {
+    "file_name": "alpaca_data_zh_51k.json",
+    "file_sha1": "e655af3db557a4197f7b0cf92e1986b08fae6311"
+  },
+  "alpaca_gpt4_en": {
+    "file_name": "alpaca_gpt4_data_en.json",
+    "file_sha1": "647f4ad447bd993e4b6b6223d1be15208bab694a"
+  },
+  "alpaca_gpt4_zh": {
+    "file_name": "alpaca_gpt4_data_zh.json",
+    "file_sha1": "3eaa3bda364ccdd59925d7448a698256c31ef845"
+  },
+  "self_cognition": {
+    "file_name": "self_cognition.json",
+    "file_sha1": "6287a730ada924fc5d9eadc6d8f865e01b7a6f67"
+  },
+  "oaast_sft": {
+    "file_name": "oaast_sft.json",
+    "file_sha1": "7baf5d43e67a91f9bbdf4e400dbe033b87e9757e",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "oaast_sft_zh": {
+    "file_name": "oaast_sft_zh.json",
+    "file_sha1": "a6a91f18f80f37b10ded9cf633fb50c033bf7b9f",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "sharegpt_zh": {
+    "file_name": "sharegpt_zh_27k.json",
+    "file_sha1": "baf766bcf3d61f1b783728c14ce695af57a86e6e",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "lima": {
+    "file_name": "lima.json",
+    "file_sha1": "9db59f6b7007dc4b17529fc63379b9cd61640f37",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "example": {
+    "script_url": "example_dataset",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "guanaco": {
+    "hf_hub_url": "JosephusCheung/GuanacoDataset"
+  },
+  "belle_0.5m": {
+    "hf_hub_url": "BelleGroup/train_0.5M_CN"
+  },
+  "belle_1m": {
+    "hf_hub_url": "BelleGroup/train_1M_CN"
+  },
+  "belle_2m": {
+    "hf_hub_url": "BelleGroup/train_2M_CN"
+  },
+  "belle_dialog": {
+    "hf_hub_url": "BelleGroup/generated_chat_0.4M"
+  },
+  "belle_math": {
+    "hf_hub_url": "BelleGroup/school_math_0.25M"
+  },
+  "belle_multiturn": {
+    "script_url": "belle_multiturn",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "codealpaca": {
+    "hf_hub_url": "sahil2801/CodeAlpaca-20k"
+  },
+  "alpaca_cot": {
+    "hf_hub_url": "QingyiSi/Alpaca-CoT"
+  },
+  "firefly": {
+    "hf_hub_url": "YeungNLP/firefly-train-1.1M",
+    "columns": {
+      "prompt": "input",
+      "query": "",
+      "response": "target",
+      "history": ""
+    }
+  },
+  "mathinstruct": {
+    "hf_hub_url": "TIGER-Lab/MathInstruct",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": ""
+    }
+  },
+  "webqa": {
+    "hf_hub_url": "suolyer/webqa",
+    "columns": {
+      "prompt": "input",
+      "query": "",
+      "response": "output",
+      "history": ""
+    }
+  },
+  "ultra_chat": {
+    "script_url": "ultra_chat",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "novel_tokens512_50k": {
+    "hf_hub_url": "zxbsmk/webnovel_cn"
+  },
+  "adgen": {
+    "hf_hub_url": "HasturOfficial/adgen",
+    "columns": {
+      "prompt": "content",
+      "query": "",
+      "response": "summary",
+      "history": ""
+    }
+  },
+  "comparison_gpt4_en": {
+    "file_name": "comparison_gpt4_data_en.json",
+    "file_sha1": "96fa18313544e22444fe20eead7754b17da452ae",
+    "ranking": true
+  },
+  "comparison_gpt4_zh": {
+    "file_name": "comparison_gpt4_data_zh.json",
+    "file_sha1": "515b18ed497199131ddcc1af950345c11dc5c7fd",
+    "ranking": true
+  },
+  "hh_rlhf_en": {
+    "script_url": "hh_rlhf_en",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": "history"
+    },
+    "ranking": true
+  },
+  "oaast_rm": {
+    "file_name": "oaast_rm.json",
+    "file_sha1": "622d420e9b70003b210618253bd3d9d2891d86cb",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    },
+    "ranking": true
+  },
+  "oaast_rm_zh": {
+    "file_name": "oaast_rm_zh.json",
+    "file_sha1": "1065af1f3784dd61be5e79713a35f427b713a232",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    },
+    "ranking": true
+  },
+  "wiki_demo": {
+    "file_name": "wiki_demo.txt",
+    "file_sha1": "b2288edb05b233e5b35250fd4b308a5fa21fa66d",
+    "columns": {
+      "prompt": "text",
+      "query": "",
+      "response": "",
+      "history": ""
+    }
+  },
+  "refinedweb": {
+    "hf_hub_url": "tiiuae/falcon-refinedweb",
+    "columns": {
+      "prompt": "content",
+      "query": "",
+      "response": "",
+      "history": ""
+    }
+  },
+  "wikipedia_en": {
+    "hf_hub_url": "olm/olm-wikipedia-20221220",
+    "columns": {
+      "prompt": "text",
+      "query": "",
+      "response": "",
+      "history": ""
+    }
+  },
+  "wikipedia_zh": {
+    "hf_hub_url": "pleisto/wikipedia-cn-20230720-filtered",
+    "columns": {
+      "prompt": "completion",
+      "query": "",
+      "response": "",
+      "history": ""
+    }
+  },
+  "open_platpus": {
+    "file_name": "open_platpus.json",
+    "file_sha1": "e5558d35a6dcbb08b13b28ade5359ae0b7da35ab",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "platpus_lima": {
+    "file_name": "platpus_lima.json",
+    "file_sha1": "fe4e18273865dea7678c52606ae7d8b0a89b9040",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "orca_10k_v1": {
+    "file_name": "orca_10k_v1.json",
+    "file_sha1": "e2ce071be5d7c037f37fd21abf60859a9ee6c183",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "platpus_orca_10k": {
+    "file_name": "platpus_orca_10k_v1.json",
+    "file_sha1": "dfd191a2517202c841f3d38eeaaa5fa4c8360863",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "platpus_orca10k_alpaca1k": {
+    "file_name": "platpus_orca10k_alpaca1k_v1.json",
+    "file_sha1": "0944b37a548802ead9c3ce210f5e79417860aeb7",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "orca_20k_v1": {
+    "file_name": "orca_20k_v1.json",
+    "file_sha1": "08758c02e19a956886a657aa3738d1ab866829b9",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "platpus_orca_20k": {
+    "file_name": "platpus_orca_20k_v1.json",
+    "file_sha1": "1ae868984f325c282d7c2322b9b2a28996a66af5",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "orca_50k_v1": {
+    "file_name": "orca_50k_v1.json",
+    "file_sha1": "1b02c25250f4f9ee964531bba0f028b3acd8c17f",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "platpus_orca_50k": {
+    "file_name": "platpus_orca_50k_v1.json",
+    "file_sha1": "e214ee8c239c94319ad3bd5ed195a09ab32a37a5",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "mc_data_30k": {
+    "file_name": "mc_data_30214.json",
+    "file_sha1": "31877fae6ea2fca08ed3ccdf18fff6e32fb91474",
+    "ranking": true
+  },
+  "mc_data_merge_v1": {
+    "file_name": "mc_data_merge_v1.json",
+    "file_sha1": "39fd9fc18963de227902f01ca05d72ff1d846773",
+    "ranking": true
+  },
+  "platpus_mathorca_30k": {
+    "file_name": "platpus_mathorca_30k_v1.json",
+    "file_sha1": "ffe615e73c2d63ceede2e792b1f7c63d944142fd",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "platpus_orca_170k": {
+    "file_name": "platpus_orca_170k_v1.json",
+    "file_sha1": "6d994f6364cd5651bf237d8bd9c199d88afbf639",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "platpus_orca_mc_13k": {
+    "file_name": "platpus_orca_mc_13k_v1.json",
+    "file_sha1": "1d5a78e9bc6bfe0a5e04f81545a557540f592a29",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "orca_all": {
+    "file_name": "orca_all.json",
+    "file_sha1": "41fcb2861855a021f1ea53d74be787b0198953e4",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "platpus_orca_all_v1": {
+    "file_name": "platpus_orca_all.json",
+    "file_sha1": "bbe32c28508cca019fde73103c251c9525615065",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "the_stack": {
+    "hf_hub_url": "bigcode/the-stack",
+    "columns": {
+      "prompt": "content",
+      "query": "",
+      "response": "",
+      "history": ""
+    }
+  },
+  "starcoder": {
+    "hf_hub_url": "bigcode/starcoderdata",
+    "columns": {
+      "prompt": "content",
+      "query": "",
+      "response": "",
+      "history": ""
+    }
+  },
+  "1007_dolly_cnn8k_bbq6k": {
+    "file_name": "1007_dolly_cnn8k_bbq6k.json",
+    "file_sha1": "fecc48a771c6de597b1830302dbe0e5acf9fa476",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1007_dolly_flan20k_cnn2k_bbq4k": {
+    "file_name": "1007_dolly_cnn8k_bbq6k.json",
+    "file_sha1": "9051dbdaf46b2a4403cd4d40a373ef4a0553f926",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1008_dolly_flan10k_cnn2k_bbq8k": {
+    "file_name": "1008_dolly_flan10k_cnn2k_bbq8k.json",
+    "file_sha1": "66ca03602087dc42c12646d4b2c4bf2c2489adaa",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1008_dolly_flan10k_cnn2k_bbq8k_mmlu8k": {
+    "file_name": "1008_dolly_flan10k_cnn2k_bbq8k_mmlu8k.json",
+    "file_sha1": "3c7188612adabbfec9f78561ea458d49dd538fb1",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1009_dolly_flan10k_cnn4k_bbq12k_mmlu8k": {
+    "file_name": "1009_dolly_flan10k_cnn4k_bbq12k_mmlu8k.json",
+    "file_sha1": "927747970487e5ee447e7b6a8ba0c0dbcf256a90",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1009_dolly_flan10k_cnn1k_bbq12k_mmlu8k": {
+    "file_name": "1009_dolly_flan10k_cnn1k_bbq12k_mmlu8k.json",
+    "file_sha1": "5d6f20ad64e4d58a82ef513e53cb40da340552a3",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1010_dolly_cnn1k_bbq12k_mmlu12k_alpaca": {
+    "file_name": "1010_dolly_cnn1k_bbq12k_mmlu12k_alpaca.json",
+    "file_sha1": "572f722720eb2c71e1339e2f43585947ba6e7ecc",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1010_dolly_cnn1kD_bbq12k_mmlu12k_alpaca": {
+    "file_name": "1010_dolly_cnn1kD_bbq12k_mmlu12k_alpaca.json",
+    "file_sha1": "afa9ebac92bf716ef2d01351cfdc7ae6d4325a3a",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1010_dolly_cnn1kD_bbq20k_mmlu12k_alpaca": {
+    "file_name": "1010_dolly_cnn1kD_bbq20k_mmlu12k_alpaca.json",
+    "file_sha1": "5fc0951f56b359a38da5227be0f918cbeb8a4364",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1011_dolly_cnn1kD_bbq50k_gsm1k_mmlu20k_alpaca": {
+    "file_name": "1011_dolly_cnn1kD_bbq50k_gsm1k_mmlu20k_alpaca.json",
+    "file_sha1": "c6f9ee551e811a885be27f897fa2987c30ca6ea5",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1011_dolly_cnn1kD_bbq50k_mmlu20k_alpaca": {
+    "file_name": "1011_dolly_cnn1kD_bbq50k_mmlu20k_alpaca.json",
+    "file_sha1": "64a576293c85e82fb98d1fc7c5ea4ca25e0fd8d2",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1011_dolly_cnn1k8D_bbq50k_mmlu27k_alpaca": {
+    "file_name": "1011_dolly_cnn1k8D_bbq50k_mmlu27k_alpaca.json",
+    "file_sha1": "1aff0934e42594fca2976f2fed46fe84986b35c1",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1011_mmlu63k_alpaca": {
+    "file_name": "1011_mmlu63k_alpaca.json",
+    "file_sha1": "52dcce7176f33e6e678692bfb68a41c6ebfb8c5f",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_dolly_cnn1k8D_bbq12k_mmlu42k_alpaca": {
+    "file_name": "1012_dolly_cnn1k8D_bbq12k_mmlu42k_alpaca.json",
+    "file_sha1": "f909da05d5ce47f2a57e09734bba3ab024a16fbc",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_dolly_cnn1k8D_bbq12k_mmlu22k_alpaca": {
+    "file_name": "1012_dolly_cnn1k8D_bbq12k_mmlu22k_alpaca.json",
+    "file_sha1": "32e4fb87b1b26e814c7b7e2c715429320c25a229",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_cnn1k8D_bbq12k_mmlu22k_alpaca": {
+    "file_name": "1012_cnn1k8D_bbq12k_mmlu22k_alpaca.json",
+    "file_sha1": "f362771ba92953eb682e96ce57e5eed8d23f8e52",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_dolly3k_cnn1k8D_bbq12k_mmlu22k_alpaca": {
+    "file_name": "1012_dolly3k_cnn1k8D_bbq12k_mmlu22k_alpaca.json",
+    "file_sha1": "6957c4654931b04f1cc1381dc9c5f4c8e50b7c6a",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_dolly3k_cnn1k8D_bbq12k_mmlu42k_alpaca": {
+    "file_name": "1012_dolly3k_cnn1k8D_bbq12k_mmlu42k_alpaca.json",
+    "file_sha1": "3a1547c4f309d385d3519cc5d74bef92d49ef884",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_dolly3k_cnn1k8D_bbq12k_mmlu29k_alpaca": {
+    "file_name": "1012_dolly3k_cnn1k8D_bbq12k_mmlu29k_alpaca.json",
+    "file_sha1": "47ee1fe84d2379303abf81e58ba5ad9b8f12df59",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_dolly3k_cnn1k8D_bbq12k_mmlu29kP_alpaca": {
+    "file_name": "1012_dolly3k_cnn1k8D_bbq12k_mmlu29kP_alpaca.json",
+    "file_sha1": "0eb10ed5192ad796db934dfd6b0c6a9c345eed71",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_dolly8k_cnn2k2D_bbq12k_mmlu29kP_alpaca": {
+    "file_name": "1012_dolly8k_cnn2k2D_bbq12k_mmlu29kP_alpaca.json",
+    "file_sha1": "3f4feb6a0443fc80c91582eb8d510246a88f32ac",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1012_dolly8k_cnn3kD_bbq12k_mmlu29k_alpaca": {
+    "file_name": "1012_dolly8k_cnn3kD_bbq12k_mmlu29k_alpaca.json",
+    "file_sha1": "4ccadb4c91476b9daa4c5fa859b929f8cfd69279",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1013_dolly12k_cnn7kD_bbq12k_mmlu38k_alpaca": {
+    "file_name": "1013_dolly12k_cnn7kD_bbq12k_mmlu38k_alpaca.json",
+    "file_sha1": "c88cbf2449043891e676675f0db06246e0ee297d",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1013_dolly12k_cnn7kD_bbq12k_mmlu29k9kUP_alpaca": {
+    "file_name": "1013_dolly12k_cnn7kD_bbq12k_mmlu29k9kUP_alpaca.json",
+    "file_sha1": "a1b636e6f26db0802295b9b00224306e2dc2382c",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1013_dolly12k_cnn7kD_bbq12k_mmlu29k9kP_alpaca": {
+    "file_name": "1013_dolly12k_cnn7kD_bbq12k_mmlu29k9kP_alpaca.json",
+    "file_sha1": "ddad04d2966d2084c8bc94d0ce236f4a9baa1a91",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1015_dolly8k_cnn3kDP_bbq12k_mmlu29k_alpaca": {
+    "file_name": "1015_dolly8k_cnn3kDP_bbq12k_mmlu29k_alpaca.json",
+    "file_sha1": "fa80bb94e3e9d06cfa115a10b5fb5c00000dbef1",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1013_dolly12k_cnn7kD_bbq12k_mmlu29k9kPA_alpaca": {
+    "file_name": "1013_dolly12k_cnn7kD_bbq12k_mmlu29k9kPA_alpaca.json",
+    "file_sha1": "a01dfbdab0e329687eb0c2f8feb265a69de63562",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1018_dolly8k_cnn4kD_bbq12k_mmlu29k_alpaca": {
+    "file_name": "1018_dolly8k_cnn4kD_bbq12k_mmlu29k_alpaca.json",
+    "file_sha1": "50d5902b8e8f0abc4eff443952819545a8c4d744",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1019_dolly8k_cnn3kDPR_bbq12k_mmlu29k_alpaca": {
+    "file_name": "1019_dolly8k_cnn3kDPR_bbq12k_mmlu29k_alpaca.json",
+    "file_sha1": "4a8be53ad5129e4ce6596efbf7e9e223b4295264",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1024_dolly12k_cnn4kDPR_bbq12k_mmlu37860raw_alpaca": {
+    "file_name": "1024_dolly12k_cnn4kDPR_bbq12k_mmlu37860raw_alpaca.json",
+    "file_sha1": "db5f80a3e4c86e63cc86b03cd22caeef62fe02b6",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1024_dolly8k_cnn4kD_bbq12k_mmlu37860raw_alpaca": {
+    "file_name": "1024_dolly8k_cnn4kD_bbq12k_mmlu37860raw_alpaca.json",
+    "file_sha1": "28080485f87427ffceb947b32ef2c0ec4e7905b7",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1024_dolly12k_gsm3k_cnn4kD_bbq12k_mmlu37860raw_alpaca": {
+    "file_name": "1024_dolly12k_gsm3k_cnn4kD_bbq12k_mmlu37860raw_alpaca.json",
+    "file_sha1": "da862cb1b8b07169bee2219d03a19ee7d6af94f1",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1024_dolly12k_gsm2k_cnn4kD_bbq12k_mmlu21040raw_alpaca": {
+    "file_name": "1024_dolly12k_gsm2k_cnn4kD_bbq12k_mmlu21040raw_alpaca.json",
+    "file_sha1": "92a00870b49d9e999749b7529a89347476a6cfaf",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1024_dolly12k_gsm2k_cnn4kD_bbq8k_mmlu21040raw_alpaca": {
+    "file_name": "1024_dolly12k_gsm2k_cnn4kD_bbq8k_mmlu21040raw_alpaca.json",
+    "file_sha1": "e404254ba9a79224106d1da040756984dec89041",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1024_dolly15k_cnn4kD_bbq8k_gsm2k_mmlu21040raw_alpaca": {
+    "file_name": "1024_dolly15k_cnn4kD_bbq8k_gsm2k_mmlu21040raw_alpaca.json",
+    "file_sha1": "00204e90a2357edf04d2b1e7f66d75244f4ad9d3",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1024_dolly15k_cnn4kD_bbq8ks_mmlu21040raw_alpaca": {
+    "file_name": "1024_dolly15k_cnn4kD_bbq8ks_mmlu21040raw_alpaca.json",
+    "file_sha1": "19eec56a4c6fd90ead0bdd98f58903984cf3d2a4",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1024_dolly15k_cnn4kD_bbq8ks_big1600_mmlu21040raw_alpaca": {
+    "file_name": "1024_dolly15k_cnn4kD_bbq8ks_big1600_mmlu21040raw_alpaca.json",
+    "file_sha1": "923309dc868b9b3203918a8b53ef4c15cf682d56",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1025_dolly15k_cnn4kB_bbq8ks_mmlu29k_alpaca": {
+    "file_name": "1025_dolly15k_cnn4kB_bbq8ks_mmlu29k_alpaca.json",
+    "file_sha1": "66290f418ec7a71446c4391f6f016eb0d44defc3",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1025_dolly8k_cnn4kD_bbq8ks_mmlu21kRAW_alpaca": {
+    "file_name": "1025_dolly8k_cnn4kD_bbq8ks_mmlu21kRAW_alpaca.json",
+    "file_sha1": "b13dc5c7997266f24d4af2de31ec811eeaa2470f",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1025_dolly8k_cnn4kD_bbq8ks_mmlu21kRAW_sci6k_alpaca": {
+    "file_name": "1025_dolly8k_cnn4kD_bbq8ks_mmlu21kRAW_sci6k_alpaca.json",
+    "file_sha1": "a186c0ed0701c8533a0ac3934ac9fb8623aeee6f",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1025_dolly8k_cnn4kD_bbq8ks_mmlu19kRAW_sci6k_alpaca": {
+    "file_name": "1025_dolly8k_cnn4kD_bbq8ks_mmlu19kRAW_sci6k_alpaca.json",
+    "file_sha1": "19d0f8c3ac48bc3b1009f33e51c2e3452ffb0c8d",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1025_dolly8k_cnn4kD_bbq8ks_mmlu19kRAW_sci6k_alpaca_plus": {
+    "file_name": "1025_dolly8k_cnn4kD_bbq8ks_mmlu19kRAW_sci6k_alpaca_plus.json",
+    "file_sha1": "5a0a36d8c1d5429551cb7302e85df46d4a1b8f52",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1025_dolly8k_cnn4kD_bbq8ks_mmlu29k_sci6k_alpaca": {
+    "file_name": "1025_dolly8k_cnn4kD_bbq8ks_mmlu29k_sci6k_alpaca.json",
+    "file_sha1": "cc7e276918bd69d55a87ff840f82a37ec6472ef8",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "1025_dolly8k_cnn4kD_bbq8ks_mmlu29k_sci6k_alpaca_plus": {
+    "file_name": "1025_dolly8k_cnn4kD_bbq8ks_mmlu29k_sci6k_alpaca_plus.json",
+    "file_sha1": "f1c1e0e6d995e6d826d88859c6c95c315acc5d7a",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}

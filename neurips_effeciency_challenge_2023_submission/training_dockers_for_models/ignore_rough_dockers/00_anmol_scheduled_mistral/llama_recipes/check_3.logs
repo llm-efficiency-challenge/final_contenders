@@ -1,0 +1,355 @@
+Starting time is:  2023-10-25 14:32:15 IST+0530
+RANDOM STRING is:  debug_mistral
+REPO DECIDED is:  anmolagarwal999/nips_challenge_debug_mistral
+Token will not been saved to git credential helper. Pass `add_to_git_credential=True` if you want to set the git credential as well.
+Token is valid (permission: write).
+Your token has been saved to /home/t-agarwalan/.cache/huggingface/token
+Login successful
+Total gradient accumulation steps are:  2
+OUTPUT dir is:  ./models_saved/8_8_debug_mistral
+Custom dataset path is:  train.py
+Going to begin finetuning
+Python env is:  wizard_coder_inference
+Script path is:  /home/t-agarwalan/Desktop/nips_effeciency_challenge/EfficiencyChallenge/code/00_starter_repo/neurips_llm_efficiency_challenge/sample-submissions/llama_recipes/llama_recipes_external_code/src/llama_recipes/finetuning.py
+KWARGS sent to main() are:  {'model_name': 'meta-llama/Llama-2-7b-hf', 'use_peft': True, 'peft_method': 'lora', 'quantization': True, 'batch_size_training': 4, 'gradient_accumulation_steps': 2, 'dataset': 'custom_dataset', 'custom_dataset.file': 'train.py:get_anmol_dataset', 'output_dir': './models_saved/8_8_debug_mistral'}
+Inside update config file
+Inside update config file
+Inside update config file
+Anmol: The final config after all the updations is:  <class 'llama_recipes.configs.training.train_config'>
+Train config seed is:  42
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.10s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.41it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s]
+/anaconda/envs/wizard_coder_inference/lib/python3.8/site-packages/peft/utils/other.py:122: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+/anaconda/envs/wizard_coder_inference/lib/python3.8/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+--> Model meta-llama/Llama-2-7b-hf
+
+--> meta-llama/Llama-2-7b-hf has 262.41024 Million params
+
+Anmol: preparing model for int8 training
+Tokenizer has been loaded:  LlamaTokenizerFast(name_or_path='meta-llama/Llama-2-7b-hf', vocab_size=32000, model_max_length=1000000000000000019884624838656, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'bos_token': AddedToken("<s>", rstrip=False, lstrip=False, single_word=False, normalized=False), 'eos_token': AddedToken("</s>", rstrip=False, lstrip=False, single_word=False, normalized=False), 'unk_token': AddedToken("<unk>", rstrip=False, lstrip=False, single_word=False, normalized=False), 'pad_token': '<PAD>'}, clean_up_tokenization_spaces=False)
+Inside update config file
+PEFT config is:  LoraConfig(peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path=None, revision=None, task_type='CAUSAL_LM', inference_mode=False, r=8, target_modules=['q_proj', 'v_proj'], lora_alpha=32, lora_dropout=0.05, fan_in_fan_out=False, bias='none', modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None)
+trainable params: 4,194,304 || all params: 6,742,609,920 || trainable%: 0.06220594176090199
+Inside update config file
+Dataset config is:  custom_dataset(dataset='custom_dataset', file='train.py:get_anmol_dataset', train_split='train', test_split='validation')
+Starting time is:  2023-10-25 14:32:24 IST+0530
+RANDOM STRING is:  debug_mistral
+REPO DECIDED is:  anmolagarwal999/nips_challenge_debug_mistral
+Ending time is:  2023-10-25 14:32:24 IST+0530
+INSIDE INIT FUNCTION for partition:  train
+TRAIN PATH is:  /home/t-agarwalan/Desktop/nips_effeciency_challenge/EfficiencyChallenge/data/training_datasets/training_datasets/combined_train_dataset.json
+Initial len is:  4927
+Final len is:  32
+Anmol: Enable FSDP val is:  False
+--> Training Set Length = 32
+Starting time is:  2023-10-25 14:32:27 IST+0530
+RANDOM STRING is:  debug_mistral
+REPO DECIDED is:  anmolagarwal999/nips_challenge_debug_mistral
+Ending time is:  2023-10-25 14:32:27 IST+0530
+INSIDE INIT FUNCTION for partition:  validation
+Validation PATH is:  /home/t-agarwalan/Desktop/nips_effeciency_challenge/EfficiencyChallenge/data/training_datasets/training_datasets/combined_valid_dataset.json
+Initial len is:  1705
+Final len is:  16
+--> Validation Set Length = 16
+Initializaing the optimizer and scheduler
+Training config is:  <class 'llama_recipes.configs.training.train_config'>
+Going to start the training process.
+Training config received is:  <class 'llama_recipes.configs.training.train_config'>
+Use fp16 has been set to:  False
+Epoch starting time:  2023-10-25 14:32:28 IST+0530
+Ministeps save_arr:  [1, 3, 5, 7]
+Essential ministeps:  [1, 7]
+Training Epoch: 0:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Total ministeps are:  8
+grad accumulation steps:  2
+Total effective steps in Epoch:  4
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+/anaconda/envs/wizard_coder_inference/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:322: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+Training Epoch: 0/3, ministep_id 0/8 completed (loss: 2.8713412284851074):   0%|[34m          [0m| 0/4 [00:03<?, ?it/s]Training Epoch: 0/3, ministep_id 0/8 completed (loss: 2.8713412284851074):  25%|[34m██▌       [0m| 1/4 [00:05<00:16,  5.45s/it]Anmol: Going to perform a ministep of training. MINISTEP ID:  0  | major_step_id:  0
+Anmol: Going to perform a ministep of training. MINISTEP ID:  1  | major_step_id:  0
+1 is worthy
+$$$$$$ EVALUATING $$$$$$
+Evaluating on epoch_id 0, step_id: 1
+
+evaluating Epoch:   0%|[32m          [0m| 0/16 [00:00<?, ?it/s][Ahuggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+evaluating Epoch:   6%|[32m▋         [0m| 1/16 [00:01<00:22,  1.51s/it][A
+evaluating Epoch:  12%|[32m█▎        [0m| 2/16 [00:02<00:19,  1.42s/it][A
+evaluating Epoch:  19%|[32m█▉        [0m| 3/16 [00:04<00:18,  1.41s/it][A
+evaluating Epoch:  25%|[32m██▌       [0m| 4/16 [00:05<00:17,  1.42s/it][A
+evaluating Epoch:  31%|[32m███▏      [0m| 5/16 [00:07<00:15,  1.43s/it][A
+evaluating Epoch:  38%|[32m███▊      [0m| 6/16 [00:08<00:14,  1.41s/it][A
+evaluating Epoch:  44%|[32m████▍     [0m| 7/16 [00:10<00:13,  1.45s/it][A
+evaluating Epoch:  50%|[32m█████     [0m| 8/16 [00:11<00:11,  1.46s/it][A
+evaluating Epoch:  56%|[32m█████▋    [0m| 9/16 [00:12<00:10,  1.43s/it][A
+evaluating Epoch:  62%|[32m██████▎   [0m| 10/16 [00:14<00:08,  1.44s/it][A
+evaluating Epoch:  69%|[32m██████▉   [0m| 11/16 [00:15<00:07,  1.42s/it][A
+evaluating Epoch:  75%|[32m███████▌  [0m| 12/16 [00:17<00:05,  1.40s/it][A
+evaluating Epoch:  81%|[32m████████▏ [0m| 13/16 [00:18<00:04,  1.36s/it][A
+evaluating Epoch:  88%|[32m████████▊ [0m| 14/16 [00:19<00:02,  1.37s/it][A
+evaluating Epoch:  94%|[32m█████████▍[0m| 15/16 [00:21<00:01,  1.37s/it][A
+evaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:22<00:00,  1.38s/it][Aevaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:22<00:00,  1.41s/it]
+Training Epoch: 0/3, ministep_id 1/8 completed (loss: 2.9036736488342285):  25%|[34m██▌       [0m| 1/4 [00:28<00:16,  5.45s/it]Training Epoch: 0/3, ministep_id 2/8 completed (loss: 2.1530935764312744):  25%|[34m██▌       [0m| 1/4 [00:30<00:16,  5.45s/it]Training Epoch: 0/3, ministep_id 2/8 completed (loss: 2.1530935764312744):  50%|[34m█████     [0m| 2/4 [00:32<00:36, 18.27s/it]Training Epoch: 0/3, ministep_id 3/8 completed (loss: 2.542013645172119):  50%|[34m█████     [0m| 2/4 [00:32<00:36, 18.27s/it] Training Epoch: 0/3, ministep_id 4/8 completed (loss: 2.621925115585327):  50%|[34m█████     [0m| 2/4 [00:34<00:36, 18.27s/it]Training Epoch: 0/3, ministep_id 4/8 completed (loss: 2.621925115585327):  75%|[34m███████▌  [0m| 3/4 [00:37<00:11, 11.92s/it]Training Epoch: 0/3, ministep_id 5/8 completed (loss: 2.3375627994537354):  75%|[34m███████▌  [0m| 3/4 [00:37<00:11, 11.92s/it]Training Epoch: 0/3, ministep_id 6/8 completed (loss: 1.7998427152633667):  75%|[34m███████▌  [0m| 3/4 [00:39<00:11, 11.92s/it]Training Epoch: 0/3, ministep_id 6/8 completed (loss: 1.7998427152633667): 100%|[34m██████████[0m| 4/4 [00:41<00:00,  8.98s/it] eval_ppl=tensor(260.5795, device='cuda:0') eval_epoch_loss=tensor(5.5629, device='cuda:0')
+Eval epoch loss:  tensor(5.5629, device='cuda:0') | best_val_loss:  inf
+we are about to save the PEFT modules
+SAVE DIR is:  ./models_saved/8_8_debug_mistral/best_model_yet_epoch_0_1
+Time while saving:  2023-10-25 14:32:56 IST+0530
+PEFT modules are saved in ./models_saved/8_8_debug_mistral directory
+best eval loss on epoch 0 and 1 is 5.562908172607422
+$$$$$$ EVALUATION DONE $$$$$$
+Anmol: Going to perform a ministep of training. MINISTEP ID:  2  | major_step_id:  1
+Anmol: Going to perform a ministep of training. MINISTEP ID:  3  | major_step_id:  1
+3 is worthy
+Anmol: Going to perform a ministep of training. MINISTEP ID:  4  | major_step_id:  2
+Anmol: Going to perform a ministep of training. MINISTEP ID:  5  | major_step_id:  2
+5 is worthy
+Anmol: Going to perform a ministep of training. MINISTEP ID:  6  | major_step_id:  3
+Anmol: Going to perform a ministep of training. MINISTEP ID:  7  | major_step_id:  3
+7 is worthy
+$$$$$$ EVALUATING $$$$$$
+Evaluating on epoch_id 0, step_id: 7
+
+evaluating Epoch:   0%|[32m          [0m| 0/16 [00:00<?, ?it/s][Ahuggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+evaluating Epoch:   6%|[32m▋         [0m| 1/16 [00:01<00:25,  1.68s/it][A
+evaluating Epoch:  12%|[32m█▎        [0m| 2/16 [00:03<00:21,  1.52s/it][A
+evaluating Epoch:  19%|[32m█▉        [0m| 3/16 [00:04<00:18,  1.46s/it][A
+evaluating Epoch:  25%|[32m██▌       [0m| 4/16 [00:05<00:16,  1.36s/it][A
+evaluating Epoch:  31%|[32m███▏      [0m| 5/16 [00:07<00:15,  1.43s/it][A
+evaluating Epoch:  38%|[32m███▊      [0m| 6/16 [00:08<00:13,  1.39s/it][A
+evaluating Epoch:  44%|[32m████▍     [0m| 7/16 [00:09<00:12,  1.40s/it][A
+evaluating Epoch:  50%|[32m█████     [0m| 8/16 [00:11<00:11,  1.40s/it][A
+evaluating Epoch:  56%|[32m█████▋    [0m| 9/16 [00:12<00:09,  1.37s/it][A
+evaluating Epoch:  62%|[32m██████▎   [0m| 10/16 [00:14<00:08,  1.38s/it][A
+evaluating Epoch:  69%|[32m██████▉   [0m| 11/16 [00:15<00:07,  1.41s/it][A
+evaluating Epoch:  75%|[32m███████▌  [0m| 12/16 [00:17<00:05,  1.42s/it][A
+evaluating Epoch:  81%|[32m████████▏ [0m| 13/16 [00:18<00:04,  1.36s/it][A
+evaluating Epoch:  88%|[32m████████▊ [0m| 14/16 [00:19<00:02,  1.37s/it][A
+evaluating Epoch:  94%|[32m█████████▍[0m| 15/16 [00:20<00:01,  1.37s/it][A
+evaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:22<00:00,  1.39s/it][Aevaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:22<00:00,  1.40s/it]
+Training Epoch: 0/3, ministep_id 7/8 completed (loss: 2.1769332885742188): 100%|[34m██████████[0m| 4/4 [01:04<00:00,  8.98s/it]Training Epoch: 0/3, ministep_id 7/8 completed (loss: 2.1769332885742188): 100%|[34m██████████[0m| 4/4 [01:04<00:00, 16.06s/it]
+ eval_ppl=tensor(54.8246, device='cuda:0') eval_epoch_loss=tensor(4.0041, device='cuda:0')
+Eval epoch loss:  tensor(4.0041, device='cuda:0') | best_val_loss:  tensor(5.5629, device='cuda:0')
+we are about to save the PEFT modules
+SAVE DIR is:  ./models_saved/8_8_debug_mistral/best_model_yet_epoch_0_7
+Time while saving:  2023-10-25 14:33:32 IST+0530
+PEFT modules are saved in ./models_saved/8_8_debug_mistral directory
+best eval loss on epoch 0 and 7 is 4.004139423370361
+$$$$$$ EVALUATION DONE $$$$$$
+Epoch ending time:  2023-10-25 14:33:33 IST+0530
+Validation losses are: 
+{'epoch_id': 0, 'ministep_id': 1, 'eval_epoch_loss': tensor(5.5629, device='cuda:0'), 'best_val_loss_yet': tensor(5.5629, device='cuda:0')}
+{'epoch_id': 0, 'ministep_id': 7, 'eval_epoch_loss': tensor(4.0041, device='cuda:0'), 'best_val_loss_yet': tensor(4.0041, device='cuda:0')}
+$$$%%%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Epoch 0: train_perplexity=11.3113, train_epoch_loss=2.4258, epoch time 64.42128636094276s
+Epoch starting time:  2023-10-25 14:33:33 IST+0530
+Ministeps save_arr:  [1, 3, 5, 7]
+Essential ministeps:  [1, 7]
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Total ministeps are:  8
+grad accumulation steps:  2
+Total effective steps in Epoch:  4
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Training Epoch: 1/3, ministep_id 0/8 completed (loss: 1.7777187824249268):   0%|[34m          [0m| 0/4 [00:02<?, ?it/s]Training Epoch: 1/3, ministep_id 0/8 completed (loss: 1.7777187824249268):  25%|[34m██▌       [0m| 1/4 [00:04<00:13,  4.54s/it]Anmol: Going to perform a ministep of training. MINISTEP ID:  0  | major_step_id:  0
+Anmol: Going to perform a ministep of training. MINISTEP ID:  1  | major_step_id:  0
+1 is worthy
+$$$$$$ EVALUATING $$$$$$
+Evaluating on epoch_id 1, step_id: 1
+
+evaluating Epoch:   0%|[32m          [0m| 0/16 [00:00<?, ?it/s][Ahuggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+evaluating Epoch:   6%|[32m▋         [0m| 1/16 [00:01<00:20,  1.36s/it][A
+evaluating Epoch:  12%|[32m█▎        [0m| 2/16 [00:02<00:17,  1.28s/it][A
+evaluating Epoch:  19%|[32m█▉        [0m| 3/16 [00:04<00:19,  1.46s/it][A
+evaluating Epoch:  25%|[32m██▌       [0m| 4/16 [00:05<00:18,  1.54s/it][A
+evaluating Epoch:  31%|[32m███▏      [0m| 5/16 [00:07<00:16,  1.51s/it][A
+evaluating Epoch:  38%|[32m███▊      [0m| 6/16 [00:08<00:14,  1.46s/it][A
+evaluating Epoch:  44%|[32m████▍     [0m| 7/16 [00:10<00:12,  1.43s/it][A
+evaluating Epoch:  50%|[32m█████     [0m| 8/16 [00:11<00:11,  1.39s/it][A
+evaluating Epoch:  56%|[32m█████▋    [0m| 9/16 [00:12<00:09,  1.32s/it][A
+evaluating Epoch:  62%|[32m██████▎   [0m| 10/16 [00:13<00:07,  1.26s/it][A
+evaluating Epoch:  69%|[32m██████▉   [0m| 11/16 [00:15<00:06,  1.29s/it][A
+evaluating Epoch:  75%|[32m███████▌  [0m| 12/16 [00:16<00:05,  1.30s/it][A
+evaluating Epoch:  81%|[32m████████▏ [0m| 13/16 [00:17<00:03,  1.27s/it][A
+evaluating Epoch:  88%|[32m████████▊ [0m| 14/16 [00:18<00:02,  1.23s/it][A
+evaluating Epoch:  94%|[32m█████████▍[0m| 15/16 [00:19<00:01,  1.22s/it][A
+evaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:21<00:00,  1.22s/it][Aevaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:21<00:00,  1.32s/it]
+Training Epoch: 1/3, ministep_id 1/8 completed (loss: 1.7851063013076782):  25%|[34m██▌       [0m| 1/4 [00:26<00:13,  4.54s/it]Training Epoch: 1/3, ministep_id 2/8 completed (loss: 1.1621779203414917):  25%|[34m██▌       [0m| 1/4 [00:28<00:13,  4.54s/it]Training Epoch: 1/3, ministep_id 2/8 completed (loss: 1.1621779203414917):  50%|[34m█████     [0m| 2/4 [00:30<00:34, 17.09s/it]Training Epoch: 1/3, ministep_id 3/8 completed (loss: 1.3875280618667603):  50%|[34m█████     [0m| 2/4 [00:30<00:34, 17.09s/it]Training Epoch: 1/3, ministep_id 4/8 completed (loss: 1.3847635984420776):  50%|[34m█████     [0m| 2/4 [00:32<00:34, 17.09s/it]Training Epoch: 1/3, ministep_id 4/8 completed (loss: 1.3847635984420776):  75%|[34m███████▌  [0m| 3/4 [00:34<00:11, 11.34s/it]Training Epoch: 1/3, ministep_id 5/8 completed (loss: 1.2519272565841675):  75%|[34m███████▌  [0m| 3/4 [00:34<00:11, 11.34s/it]Training Epoch: 1/3, ministep_id 6/8 completed (loss: 0.9219858646392822):  75%|[34m███████▌  [0m| 3/4 [00:37<00:11, 11.34s/it]Training Epoch: 1/3, ministep_id 6/8 completed (loss: 0.9219858646392822): 100%|[34m██████████[0m| 4/4 [00:39<00:00,  8.62s/it] eval_ppl=tensor(32.5455, device='cuda:0') eval_epoch_loss=tensor(3.4826, device='cuda:0')
+Eval epoch loss:  tensor(3.4826, device='cuda:0') | best_val_loss:  tensor(4.0041, device='cuda:0')
+we are about to save the PEFT modules
+SAVE DIR is:  ./models_saved/8_8_debug_mistral/best_model_yet_epoch_1_1
+Time while saving:  2023-10-25 14:33:59 IST+0530
+PEFT modules are saved in ./models_saved/8_8_debug_mistral directory
+best eval loss on epoch 1 and 1 is 3.4826388359069824
+$$$$$$ EVALUATION DONE $$$$$$
+Anmol: Going to perform a ministep of training. MINISTEP ID:  2  | major_step_id:  1
+Anmol: Going to perform a ministep of training. MINISTEP ID:  3  | major_step_id:  1
+3 is worthy
+Anmol: Going to perform a ministep of training. MINISTEP ID:  4  | major_step_id:  2
+Anmol: Going to perform a ministep of training. MINISTEP ID:  5  | major_step_id:  2
+5 is worthy
+Anmol: Going to perform a ministep of training. MINISTEP ID:  6  | major_step_id:  3
+Anmol: Going to perform a ministep of training. MINISTEP ID:  7  | major_step_id:  3
+7 is worthy
+$$$$$$ EVALUATING $$$$$$
+Evaluating on epoch_id 1, step_id: 7
+
+evaluating Epoch:   0%|[32m          [0m| 0/16 [00:00<?, ?it/s][Ahuggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+evaluating Epoch:   6%|[32m▋         [0m| 1/16 [00:01<00:22,  1.48s/it][A
+evaluating Epoch:  12%|[32m█▎        [0m| 2/16 [00:02<00:19,  1.41s/it][A
+evaluating Epoch:  19%|[32m█▉        [0m| 3/16 [00:04<00:18,  1.43s/it][A
+evaluating Epoch:  25%|[32m██▌       [0m| 4/16 [00:05<00:16,  1.42s/it][A
+evaluating Epoch:  31%|[32m███▏      [0m| 5/16 [00:07<00:15,  1.41s/it][A
+evaluating Epoch:  38%|[32m███▊      [0m| 6/16 [00:08<00:14,  1.50s/it][A
+evaluating Epoch:  44%|[32m████▍     [0m| 7/16 [00:10<00:13,  1.45s/it][A
+evaluating Epoch:  50%|[32m█████     [0m| 8/16 [00:11<00:11,  1.43s/it][A
+evaluating Epoch:  56%|[32m█████▋    [0m| 9/16 [00:12<00:09,  1.41s/it][A
+evaluating Epoch:  62%|[32m██████▎   [0m| 10/16 [00:13<00:07,  1.32s/it][A
+evaluating Epoch:  69%|[32m██████▉   [0m| 11/16 [00:15<00:06,  1.27s/it][A
+evaluating Epoch:  75%|[32m███████▌  [0m| 12/16 [00:16<00:05,  1.28s/it][A
+evaluating Epoch:  81%|[32m████████▏ [0m| 13/16 [00:17<00:03,  1.28s/it][A
+evaluating Epoch:  88%|[32m████████▊ [0m| 14/16 [00:19<00:02,  1.32s/it][A
+evaluating Epoch:  94%|[32m█████████▍[0m| 15/16 [00:20<00:01,  1.42s/it][A
+evaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:22<00:00,  1.48s/it][Aevaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:22<00:00,  1.40s/it]
+Training Epoch: 1/3, ministep_id 7/8 completed (loss: 0.8329160213470459): 100%|[34m██████████[0m| 4/4 [01:02<00:00,  8.62s/it]Training Epoch: 1/3, ministep_id 7/8 completed (loss: 0.8329160213470459): 100%|[34m██████████[0m| 4/4 [01:02<00:00, 15.51s/it]
+ eval_ppl=tensor(7.7489, device='cuda:0') eval_epoch_loss=tensor(2.0475, device='cuda:0')
+Eval epoch loss:  tensor(2.0475, device='cuda:0') | best_val_loss:  tensor(3.4826, device='cuda:0')
+we are about to save the PEFT modules
+SAVE DIR is:  ./models_saved/8_8_debug_mistral/best_model_yet_epoch_1_7
+Time while saving:  2023-10-25 14:34:35 IST+0530
+PEFT modules are saved in ./models_saved/8_8_debug_mistral directory
+best eval loss on epoch 1 and 7 is 2.0475471019744873
+$$$$$$ EVALUATION DONE $$$$$$
+Epoch ending time:  2023-10-25 14:34:35 IST+0530
+Validation losses are: 
+{'epoch_id': 0, 'ministep_id': 1, 'eval_epoch_loss': tensor(5.5629, device='cuda:0'), 'best_val_loss_yet': tensor(5.5629, device='cuda:0')}
+{'epoch_id': 0, 'ministep_id': 7, 'eval_epoch_loss': tensor(4.0041, device='cuda:0'), 'best_val_loss_yet': tensor(4.0041, device='cuda:0')}
+{'epoch_id': 1, 'ministep_id': 1, 'eval_epoch_loss': tensor(3.4826, device='cuda:0'), 'best_val_loss_yet': tensor(3.4826, device='cuda:0')}
+{'epoch_id': 1, 'ministep_id': 7, 'eval_epoch_loss': tensor(2.0475, device='cuda:0'), 'best_val_loss_yet': tensor(2.0475, device='cuda:0')}
+$$$%%%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Epoch 1: train_perplexity=3.7174, train_epoch_loss=1.3130, epoch time 62.21624733193312s
+Epoch starting time:  2023-10-25 14:34:35 IST+0530
+Ministeps save_arr:  [1, 3, 5, 7]
+Essential ministeps:  [1, 7]
+Training Epoch: 2:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Total ministeps are:  8
+grad accumulation steps:  2
+Total effective steps in Epoch:  4
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Training Epoch: 2/3, ministep_id 0/8 completed (loss: 0.6503697037696838):   0%|[34m          [0m| 0/4 [00:02<?, ?it/s]Training Epoch: 2/3, ministep_id 0/8 completed (loss: 0.6503697037696838):  25%|[34m██▌       [0m| 1/4 [00:04<00:13,  4.40s/it]Anmol: Going to perform a ministep of training. MINISTEP ID:  0  | major_step_id:  0
+Anmol: Going to perform a ministep of training. MINISTEP ID:  1  | major_step_id:  0
+1 is worthy
+$$$$$$ EVALUATING $$$$$$
+Evaluating on epoch_id 2, step_id: 1
+
+evaluating Epoch:   0%|[32m          [0m| 0/16 [00:00<?, ?it/s][Ahuggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+evaluating Epoch:   6%|[32m▋         [0m| 1/16 [00:01<00:19,  1.28s/it][A
+evaluating Epoch:  12%|[32m█▎        [0m| 2/16 [00:02<00:17,  1.22s/it][A
+evaluating Epoch:  19%|[32m█▉        [0m| 3/16 [00:03<00:16,  1.30s/it][A
+evaluating Epoch:  25%|[32m██▌       [0m| 4/16 [00:05<00:16,  1.34s/it][A
+evaluating Epoch:  31%|[32m███▏      [0m| 5/16 [00:06<00:14,  1.35s/it][A
+evaluating Epoch:  38%|[32m███▊      [0m| 6/16 [00:08<00:13,  1.36s/it][A
+evaluating Epoch:  44%|[32m████▍     [0m| 7/16 [00:09<00:12,  1.41s/it][A
+evaluating Epoch:  50%|[32m█████     [0m| 8/16 [00:10<00:11,  1.40s/it][A
+evaluating Epoch:  56%|[32m█████▋    [0m| 9/16 [00:12<00:09,  1.38s/it][A
+evaluating Epoch:  62%|[32m██████▎   [0m| 10/16 [00:13<00:07,  1.29s/it][A
+evaluating Epoch:  69%|[32m██████▉   [0m| 11/16 [00:14<00:06,  1.23s/it][A
+evaluating Epoch:  75%|[32m███████▌  [0m| 12/16 [00:15<00:04,  1.22s/it][A
+evaluating Epoch:  81%|[32m████████▏ [0m| 13/16 [00:16<00:03,  1.20s/it][A
+evaluating Epoch:  88%|[32m████████▊ [0m| 14/16 [00:18<00:02,  1.21s/it][A
+evaluating Epoch:  94%|[32m█████████▍[0m| 15/16 [00:19<00:01,  1.26s/it][A
+evaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:20<00:00,  1.34s/it][Aevaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:20<00:00,  1.31s/it]
+Training Epoch: 2/3, ministep_id 1/8 completed (loss: 0.8477361798286438):  25%|[34m██▌       [0m| 1/4 [00:25<00:13,  4.40s/it]Training Epoch: 2/3, ministep_id 2/8 completed (loss: 0.5254793167114258):  25%|[34m██▌       [0m| 1/4 [00:27<00:13,  4.40s/it]Training Epoch: 2/3, ministep_id 2/8 completed (loss: 0.5254793167114258):  50%|[34m█████     [0m| 2/4 [00:30<00:33, 16.87s/it]Training Epoch: 2/3, ministep_id 3/8 completed (loss: 0.5800917744636536):  50%|[34m█████     [0m| 2/4 [00:30<00:33, 16.87s/it]Training Epoch: 2/3, ministep_id 4/8 completed (loss: 0.4602838456630707):  50%|[34m█████     [0m| 2/4 [00:32<00:33, 16.87s/it]Training Epoch: 2/3, ministep_id 4/8 completed (loss: 0.4602838456630707):  75%|[34m███████▌  [0m| 3/4 [00:34<00:11, 11.20s/it]Training Epoch: 2/3, ministep_id 5/8 completed (loss: 0.47142207622528076):  75%|[34m███████▌  [0m| 3/4 [00:34<00:11, 11.20s/it]Training Epoch: 2/3, ministep_id 6/8 completed (loss: 0.4028094708919525):  75%|[34m███████▌  [0m| 3/4 [00:36<00:11, 11.20s/it] Training Epoch: 2/3, ministep_id 6/8 completed (loss: 0.4028094708919525): 100%|[34m██████████[0m| 4/4 [00:38<00:00,  8.53s/it] eval_ppl=tensor(5.3219, device='cuda:0') eval_epoch_loss=tensor(1.6718, device='cuda:0')
+Eval epoch loss:  tensor(1.6718, device='cuda:0') | best_val_loss:  tensor(2.0475, device='cuda:0')
+we are about to save the PEFT modules
+SAVE DIR is:  ./models_saved/8_8_debug_mistral/best_model_yet_epoch_2_1
+Time while saving:  2023-10-25 14:35:00 IST+0530
+PEFT modules are saved in ./models_saved/8_8_debug_mistral directory
+best eval loss on epoch 2 and 1 is 1.67183256149292
+$$$$$$ EVALUATION DONE $$$$$$
+Anmol: Going to perform a ministep of training. MINISTEP ID:  2  | major_step_id:  1
+Anmol: Going to perform a ministep of training. MINISTEP ID:  3  | major_step_id:  1
+3 is worthy
+Anmol: Going to perform a ministep of training. MINISTEP ID:  4  | major_step_id:  2
+Anmol: Going to perform a ministep of training. MINISTEP ID:  5  | major_step_id:  2
+5 is worthy
+Anmol: Going to perform a ministep of training. MINISTEP ID:  6  | major_step_id:  3
+Anmol: Going to perform a ministep of training. MINISTEP ID:  7  | major_step_id:  3
+7 is worthy
+$$$$$$ EVALUATING $$$$$$
+Evaluating on epoch_id 2, step_id: 7
+
+evaluating Epoch:   0%|[32m          [0m| 0/16 [00:00<?, ?it/s][Ahuggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+evaluating Epoch:   6%|[32m▋         [0m| 1/16 [00:01<00:21,  1.44s/it][A
+evaluating Epoch:  12%|[32m█▎        [0m| 2/16 [00:02<00:18,  1.31s/it][A
+evaluating Epoch:  19%|[32m█▉        [0m| 3/16 [00:04<00:17,  1.33s/it][A
+evaluating Epoch:  25%|[32m██▌       [0m| 4/16 [00:05<00:15,  1.27s/it][A
+evaluating Epoch:  31%|[32m███▏      [0m| 5/16 [00:06<00:14,  1.36s/it][A
+evaluating Epoch:  38%|[32m███▊      [0m| 6/16 [00:08<00:14,  1.47s/it][A
+evaluating Epoch:  44%|[32m████▍     [0m| 7/16 [00:09<00:12,  1.40s/it][A
+evaluating Epoch:  50%|[32m█████     [0m| 8/16 [00:10<00:10,  1.34s/it][A
+evaluating Epoch:  56%|[32m█████▋    [0m| 9/16 [00:12<00:09,  1.33s/it][A
+evaluating Epoch:  62%|[32m██████▎   [0m| 10/16 [00:13<00:08,  1.37s/it][A
+evaluating Epoch:  69%|[32m██████▉   [0m| 11/16 [00:14<00:06,  1.34s/it][A
+evaluating Epoch:  75%|[32m███████▌  [0m| 12/16 [00:16<00:05,  1.28s/it][A
+evaluating Epoch:  81%|[32m████████▏ [0m| 13/16 [00:17<00:03,  1.23s/it][A
+evaluating Epoch:  88%|[32m████████▊ [0m| 14/16 [00:18<00:02,  1.19s/it][A
+evaluating Epoch:  94%|[32m█████████▍[0m| 15/16 [00:19<00:01,  1.21s/it][A
+evaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:20<00:00,  1.26s/it][Aevaluating Epoch: 100%|[32m██████████[0m| 16/16 [00:20<00:00,  1.31s/it]
+Training Epoch: 2/3, ministep_id 7/8 completed (loss: 0.27904951572418213): 100%|[34m██████████[0m| 4/4 [01:00<00:00,  8.53s/it]Training Epoch: 2/3, ministep_id 7/8 completed (loss: 0.27904951572418213): 100%|[34m██████████[0m| 4/4 [01:00<00:00, 15.02s/it]
+ eval_ppl=tensor(2.7796, device='cuda:0') eval_epoch_loss=tensor(1.0223, device='cuda:0')
+Eval epoch loss:  tensor(1.0223, device='cuda:0') | best_val_loss:  tensor(1.6718, device='cuda:0')
+we are about to save the PEFT modules
+SAVE DIR is:  ./models_saved/8_8_debug_mistral/best_model_yet_epoch_2_7
+Time while saving:  2023-10-25 14:35:35 IST+0530
+PEFT modules are saved in ./models_saved/8_8_debug_mistral directory
+best eval loss on epoch 2 and 7 is 1.0223076343536377
+$$$$$$ EVALUATION DONE $$$$$$
+Epoch ending time:  2023-10-25 14:35:35 IST+0530
+Validation losses are: 
+{'epoch_id': 0, 'ministep_id': 1, 'eval_epoch_loss': tensor(5.5629, device='cuda:0'), 'best_val_loss_yet': tensor(5.5629, device='cuda:0')}
+{'epoch_id': 0, 'ministep_id': 7, 'eval_epoch_loss': tensor(4.0041, device='cuda:0'), 'best_val_loss_yet': tensor(4.0041, device='cuda:0')}
+{'epoch_id': 1, 'ministep_id': 1, 'eval_epoch_loss': tensor(3.4826, device='cuda:0'), 'best_val_loss_yet': tensor(3.4826, device='cuda:0')}
+{'epoch_id': 1, 'ministep_id': 7, 'eval_epoch_loss': tensor(2.0475, device='cuda:0'), 'best_val_loss_yet': tensor(2.0475, device='cuda:0')}
+{'epoch_id': 2, 'ministep_id': 1, 'eval_epoch_loss': tensor(1.6718, device='cuda:0'), 'best_val_loss_yet': tensor(1.6718, device='cuda:0')}
+{'epoch_id': 2, 'ministep_id': 7, 'eval_epoch_loss': tensor(1.0223, device='cuda:0'), 'best_val_loss_yet': tensor(1.0223, device='cuda:0')}
+$$$%%%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Epoch 2: train_perplexity=1.6941, train_epoch_loss=0.5272, epoch time 60.25331040401943s
+All epoches are over
+Key: avg_train_prep, Value: 5.574241638183594
+Key: avg_train_loss, Value: 1.4219896793365479
+Key: avg_eval_prep, Value: 60.633338928222656
+Key: avg_eval_loss, Value: 2.965229034423828
+Key: avg_epoch_time, Value: 62.29694803229844
+Key: avg_checkpoint_time, Value: 0.05027249331275622
+Going to use the API to create HF repo
+Ending time is:  2023-10-25 14:35:35 IST+0530

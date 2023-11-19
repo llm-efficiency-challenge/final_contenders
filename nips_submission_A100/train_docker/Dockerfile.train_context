@@ -1,0 +1,12 @@
+FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
+
+RUN apt-get update  && apt-get install -y git python3-virtualenv wget
+
+COPY LLaMA-Efficient-Tuning /workspace/LLaMA-Efficient-Tuning
+COPY upload_model.py ./
+
+# install requirements
+WORKDIR /workspace/LLaMA-Efficient-Tuning
+RUN pip install -r requirements.txt
+
+CMD ["bash", "nips_finetune_context2048.sh"]

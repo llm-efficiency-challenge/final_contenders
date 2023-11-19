@@ -1,0 +1,18 @@
+FROM ghcr.io/pytorch/pytorch-nightly:b3874ab-cu11.8.0
+
+RUN apt-get update  && apt-get install -y git python3-virtualenv wget
+
+RUN pip install -U --no-cache-dir git+https://github.com/facebookresearch/llama-recipes.git@eafea7b366bde9dc3f0b66a4cb0a8788f560c793
+
+RUN pip install -U --no-cache-dir git+https://github.com/huggingface/trl.git@304ee70eefb542a4c2e7fc3bcec96243e2c1bdad
+
+RUN pip install -U evaluate
+
+RUN pip install -U tensorboardx
+
+WORKDIR /workspace
+RUN mkdir /train_data
+
+COPY train.py /workspace
+CMD [ "python", "train.py"]
+

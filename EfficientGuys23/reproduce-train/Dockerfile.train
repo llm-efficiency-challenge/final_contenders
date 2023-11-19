@@ -1,0 +1,31 @@
+FROM nvcr.io/nvidia/pytorch:23.04-py3
+
+RUN apt-get update  && apt-get install -y git python3-virtualenv wget 
+
+WORKDIR /workspace
+
+RUN pip uninstall -y flash-attn
+RUN pip uninstall -y transformer-engine
+RUN pip install git+https://github.com/NVIDIA/TransformerEngine.git@stable
+
+RUN pip install transformers==4.34.0
+RUN pip install sentencepiece==0.1.99
+RUN pip install datasets==2.14.5 
+RUN pip install accelerate==0.23.0 
+RUN pip install bitsandbytes==0.41.1 
+RUN pip install einops==0.7.0 
+RUN pip install peft==0.5.0
+RUN pip install wandb
+
+# Copy over single file server
+COPY ./instruction_tuner.py instruction_tuner.py
+COPY ./instruction_tuner.sh instruction_tuner.sh
+RUN chmod +x instruction_tuner.sh
+COPY ./config.yaml config.yaml
+
+RUN apt-get -y install apt-utils sudo
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+RUN sudo apt-get install git-lfs
+
+# Trigger the training
+CMD ["./instruction_tuner.sh"]
