@@ -44,7 +44,7 @@ However, our respectable ranking was likely due to the use of GPTQ for higher qu
 
 Considering the above results, our training code essentially only involves the quantization code of Qwen-14B.
 
-The training code is available in the folder named 'training_code'. It utilizes auto-gptq to quantize Qwen-14B and uploads it to the Hugging Face Hub. To start, replace "YOUR_TOKEN" and "YOUR_USERNAME/YOUR_REPO" in the Dockerfile with your personal token and repository details. Execute the following commands:
+The training code is available in the folder named 'training_code_v2'. It utilizes auto-gptq to quantize Qwen-14B and uploads it to the Hugging Face Hub. To start, replace "YOUR_TOKEN" and "YOUR_USERNAME/YOUR_REPO" in the Dockerfile with your personal token and repository details. Execute the following commands:
 
 ```bash
 docker build -f ./Dockerfile -t qwen_quant .
@@ -62,7 +62,15 @@ The 'gen_dataset.ipynb' is for organizing the training dataset, and 'qlora.ipynb
 
 After completing Qwen quantization, please replace MODEL_PATH in main.py of 4090_submissions_1.zip with "YOUR_USERNAME/YOUR_REPO" (originally "ycchen/yc-test1"). LORA_PATH can be ignored, because it does not actually participate in the subsequent program.
 
-Then execute the Dockerfile in 4090_submissions_1.zip. 
+For Submission 1 Inference: 
+
+```bash
+cd 4090_submissions/4090_submission_1/qwen_8bit_pure
+
+docker build -f ./Dockerfile -t qwen_quant_eval .
+
+docker run --gpus "device=0" --rm -ti qwen_quant_eval
+```
 
 ## Data Format
 
