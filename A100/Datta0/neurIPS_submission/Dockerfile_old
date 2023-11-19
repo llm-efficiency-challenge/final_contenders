@@ -9,8 +9,6 @@ WORKDIR /workspace
 # Setup server requriements
 COPY ./fast_api_requirements.txt fast_api_requirements.txt
 RUN pip install --no-cache-dir --upgrade -r fast_api_requirements.txt
-RUN pip install transformers -I
-
 
 ENV HUGGINGFACE_TOKEN="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"
 # ENV HUGGINGFACE_REPO="imdatta0/qwen-oasst"
@@ -23,8 +21,9 @@ RUN echo "Logging in to Huggingfacehub"
 RUN huggingface-cli login --token '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'
 
 # Copy over single file server
-COPY ./main_repro.py main.py
+COPY ./main.py main.py
 COPY ./api.py api.py
+COPY ./train.py train.py
 
 
 # Run the server
