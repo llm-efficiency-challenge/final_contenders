@@ -1,0 +1,10 @@
+lightning @ git+https://github.com/Lightning-AI/lightning@71aed751f7f0ca8422ddca256e602099070f490b
+jsonargparse[signatures]  # CLI
+bitsandbytes   # quantization
+scipy          # required by bitsandbytes
+sentencepiece  # pythia, falcon, redpajama
+tokenizers     # llama-based models
+datasets       # quantize/gptq.py
+zstandard      # scripts/prepare_redpajama.py
+git+https://github.com/EleutherAI/lm-evaluation-harness.git@master  # eval
+pandas         # prepare_csv.py
