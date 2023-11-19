@@ -1,0 +1,7 @@
+app_components
+auto_gptq
+autogptq_cuda_256
+autogptq_cuda_64
+cQIGen
+exllama_kernels
+exllamav2_kernels
